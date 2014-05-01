@@ -1,4 +1,5 @@
 mock
 nose
 coverage
+coveralls
 -r requirements.txt
