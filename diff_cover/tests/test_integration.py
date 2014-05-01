@@ -199,6 +199,13 @@ class DiffCoverIntegrationTest(ToolsIntegrationBase):
             ['diff-cover', 'coverage.xml']
         )
 
+    def test_changed_unicode_file_html(self):
+        self._check_html_report(
+            'git_diff_changed_unicode.txt',
+            'changed_html_report.html',
+            ['diff-cover', 'coverage.xml']
+        )
+
     def test_moved_file_html(self):
         self._check_html_report(
             'git_diff_moved.txt',
