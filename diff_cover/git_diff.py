@@ -79,7 +79,7 @@ class GitDiffTool(object):
         if bool(stderr):
             raise GitDiffError(stderr)
 
-        if six.PY2 and isinstance(stdout, str):
+        if isinstance(stdout, six.binary_type):
             encoding = getattr(sys.stdout, 'encoding', 'UTF-8')
             stdout = stdout.decode(encoding)
         return stdout
